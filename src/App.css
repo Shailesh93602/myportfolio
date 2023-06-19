@@ -1,0 +1,79 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* .menu-icon {
+  display: none; /* Hide the menu icon by default on larger screens 
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show the menu icon on smaller screens 
+  }
+  
+  .menu-items {
+    display: none; /* Hide the menu items by default on smaller screens 
+  }
+  
+  .menu-items.open {
+    display: block; /* Show the menu items when the menu is open 
+  }
+}
+
+/* Hamburger icon 
+.menu-icon i.fa-bars {
+  display: block;
+}
+
+/* Close icon 
+.menu-icon i.fa-times {
+  display: none;
+}
+
+/* Styles for the menu items 
+ul.menu-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.menu-items li {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+ul.menu-items li:hover {
+  background-color: #f5f5f5;
+}
+
+ul.menu-items li.active {
+  background-color: #333;
+  color: #fff;
+} */
