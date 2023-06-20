@@ -177,10 +177,6 @@
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
   }
-
-  .social-media{
-    padding-left: 2rem;
-  }
   
   .btn{
     display: inline-block;

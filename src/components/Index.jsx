@@ -1,46 +1,34 @@
-import React, { useState, useEffect } from "react";
-import homeImg from "../images/home.png";
+import React, { useState, useCallback, useMemo } from "react";
+// import ReactDOM from "react-dom";
+import { useInterval } from "react-use";
+import homeImg from "../images/about.png";
 
 const Index = () => {
-  const elements = ['Fullstack Developer', 'C++ Developer', 'Node Developer', 'React Developer'];
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentWord, setCurrentWord] = useState('');
-  
-  useEffect(() => {
+  const elements = useMemo(() => ['Fullstack Developer', 'C++ Developer', 'Node Developer', 'React Developer'], []);
+  const [wordIndex, setWordIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
 
-    let wordIndex = 0;
-    let charIndex = 0;
+  const typingTimer = useCallback(() => {
+    setCharIndex((prevCharIndex) => prevCharIndex + 1);
 
-    const typingTimer = setInterval(() => {
-      setCurrentWord((prevWord) => {
-        const currentElement = elements[wordIndex];
-        const word = currentElement.slice(0, charIndex + 1);
-        const isLastChar = charIndex === currentElement.length - 1;
+    if (charIndex === elements[wordIndex].length) {
+      setCharIndex(0);
+      if (wordIndex === elements.length - 1) {
+        setWordIndex(0);
+      } else {
+        setWordIndex(wordIndex + 1);
+      }
+    }
+  }, [elements, charIndex, wordIndex]);
 
-        if (isLastChar) {
-          if (wordIndex === elements.length - 1) {
-            wordIndex = 0;
-          } else {
-            wordIndex++;
-          }
-          charIndex = 0;
-        } else {
-          charIndex++;
-        }
-
-        return word;
-      });
-    }, 200);
-
-    return () => clearInterval(typingTimer); 
-  }, []);
+  useInterval(typingTimer, 200);
 
   return (
     <section className="home" id="home">
       <div className="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Shailesh Chaudhari</h1>
-        <h3>And I'm a <span className="multiple-text">{currentWord}</span></h3>
+        <h3>And I'm a <span className="multiple-text">{elements[wordIndex].slice(0, charIndex)}</span></h3>
         <p>Welcome to my portfolio! I'm a passionate Full Stack Developer skilled in building dynamic web
           applications using Node.js, Express, React, and MongoDB. I'm dedicated to delivering high-quality code
           and creating seamless user experiences. Let's turn your ideas into reality!</p>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import aboutImg from "../images/about.png";
 
-const Index = () => {
+const About = () => {
   const [showFullContent, setShowFullContent] = useState(false);
 
   const toggleContent = () => {
@@ -86,4 +86,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default About;
