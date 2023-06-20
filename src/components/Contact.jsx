@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
 const Contact = () => {
+  // const handleCallClick = () => {
+  //   window.location.href = 'tel:+919313026530'; 
+  // };
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -71,6 +75,10 @@ const Contact = () => {
         ></textarea>
         <input type="submit" value="Send Message" className="btn" />
       </form>
+
+      {/* <div className="social-media">
+        <a><i className='bx bx-phone-call' onClick={handleCallClick}></i></a>
+      </div> */}
     </section>
   );
 };

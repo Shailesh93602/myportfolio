@@ -3,10 +3,11 @@ import homeImg from "../images/home.png";
 
 const Index = () => {
   const elements = ['Fullstack Developer', 'C++ Developer', 'Node Developer', 'React Developer'];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState('');
-
+  
   useEffect(() => {
+
     let wordIndex = 0;
     let charIndex = 0;
 
