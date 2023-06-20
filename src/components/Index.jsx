@@ -24,7 +24,7 @@ const Index = () => {
   useInterval(typingTimer, 200);
 
   return (
-    <section className="home" id="home">
+    <section className="home extra-padding" id="home">
       <div className="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Shailesh Chaudhari</h1>
