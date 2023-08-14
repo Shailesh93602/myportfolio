@@ -22,7 +22,7 @@ const Portfolio = () => {
               managing player registrations and conducting auctions.
             </p>
             <a
-              href="https://gecsportify.up.railway.app/"
+              href="https://Sportifygec.onrender.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
