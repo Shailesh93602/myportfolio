@@ -1,35 +1,56 @@
 import React, { useState } from "react";
 
 const Contact = () => {
-  // const handleCallClick = () => {
-  //   window.location.href = 'tel:+919313026530'; 
-  // };
-
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
   
-    // Send the form data to an API
-    const data = {
-      fullName: fullName,
-      email: email,
-      phoneNumber: phoneNumber,
-      subject: subject,
-      message: message,
-    };
-    fetch("https://my-api.com/contact", {
+    // Validate the form data
+    if (!email || !message) {
+      alert("Please fill in all the required fields.");
+      return;
+    }
+  
+    // Check if the email address is valid
+    const regex = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+    if (!regex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+  
+    // Submit the form data
+    const response = await fetch("http://localhost:5000/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
-    });  
+      body: JSON.stringify({
+        fullName,
+        email,
+        phoneNumber,
+        subject,
+        message,
+      }),
+    });
+  
+    // Handle the response
+    if (response.status === 200) {
+      alert("Your message has been sent successfully.");
+      setFullName("");
+      setEmail("");
+      setPhoneNumber("");
+      setSubject("");
+      setMessage("");
+    } else {
+      alert("There was an error sending your message.");
+    }
   };
+  
 
   return (
     <section className="contact padding" id="contact">
@@ -56,7 +77,13 @@ const Contact = () => {
           />
         </div>
         <div className="input-box">
-          <input type="tel" id="phoneNumber" placeholder="Mobile Number" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+          <input
+            type="tel"
+            id="phoneNumber"
+            placeholder="Mobile Number"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
           <input
             type="text"
             id="subject"
@@ -75,68 +102,8 @@ const Contact = () => {
         ></textarea>
         <input type="submit" value="Send Message" className="btn" />
       </form>
-
-      {/* <div className="social-media">
-        <a><i className='bx bx-phone-call' onClick={handleCallClick}></i></a>
-      </div> */}
     </section>
   );
 };
 
 export default Contact;
-
-
-
-// import React, { useState } from "react";
-// import emailjs from "emailjs-com";
-
-// const Index = () => {
-//   const [isSubmitted, setIsSubmitted] = useState(false);
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-
-//     // Perform form submission logic here
-//     // You can replace the following code with your own logic or actions
-
-//     // Configure the EmailJS service
-//     emailjs.sendForm(
-//       "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-//       "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-//       e.target,
-//       "YOUR_USER_ID" // Replace with your EmailJS user ID
-//     )
-//     .then(() => {
-//       setIsSubmitted(true);
-//     })
-//     .catch((error) => {
-//       console.error("Error sending email:", error);
-//     });
-//   };
-
-//   return (
-//     <section className="contact" id="contact">
-//       <h2 className="heading">
-//         Contact <span>Me!</span>
-//       </h2>
-//       {isSubmitted ? (
-//         <div className="success-message">Form submitted successfully!</div>
-//       ) : (
-//         <form id="contact-form" onSubmit={handleSubmit}>
-//           <div className="input-box">
-//             <input type="text" name="fullName" id="fullName" placeholder="Full Name" required />
-//             <input type="email" name="email" id="email" placeholder="Email Address" required />
-//           </div>
-//           <div className="input-box">
-//             <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Mobile Number" />
-//             <input type="text" name="subject" id="subject" placeholder="Email Subject" required />
-//           </div>
-//           <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-//           <input type="submit" value="Send Message" className="btn" />
-//         </form>
-//       )}
-//     </section>
-//   );
-// };
-
-// export default Index;
