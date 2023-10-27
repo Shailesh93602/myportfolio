@@ -1,2 +1,2 @@
 # Shaileshbhai Chaudhari
-https://shaileshchaudhari.onrender.com
+https://shaileshchaudhari.netlify.app/
