@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [fullName, setFullName] = useState("");
@@ -9,54 +10,35 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
-    // Validate the form data
-    if (!email || !message) {
-      alert("Please fill in all the required fields.");
-      return;
-    }
-  
-    // Check if the email address is valid
-    const regex = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-    if (!regex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-  
-    // Submit the form data
-    const response = await fetch("http://localhost:5000/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        fullName,
-        email,
-        phoneNumber,
-        subject,
-        message,
-      }),
-    });
-  
-    // Handle the response
-    if (response.status === 200) {
-      alert("Your message has been sent successfully.");
-      setFullName("");
-      setEmail("");
-      setPhoneNumber("");
-      setSubject("");
-      setMessage("");
-    } else {
-      alert("There was an error sending your message.");
+
+    // Send the form data to an API
+    const data = {
+      from_name: fullName,
+      from_email: email,
+      from_phoneNumber: phoneNumber,
+      from_subject: subject,
+      from_message: message,
+    };
+
+    try {
+      const response = await emailjs.send(
+        "service_uh3jspq", 
+        "template_9jk3yw8", 
+        data,
+        "LzBxIAKfE0LSvqFYw" 
+      );
+
+      console.log("Email sent successfully:", response);
+      // You can add further logic here, such as displaying a success message.
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // Handle errors, e.g., display an error message to the user.
     }
   };
-  
 
   return (
     <section className="contact padding" id="contact">
-      <h2 className="heading">
-        Contact <span>Me!</span>
-      </h2>
+      <h2 className="heading">Contact Me!</h2>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div className="input-box">
           <input
