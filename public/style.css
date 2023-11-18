@@ -13,6 +13,10 @@
     --second-bg-color: #323946;
     --text-color: white;
     --main-color: #0ef;
+    /* --bg-color: white;
+    --text-color: black;
+    --main-color: #c62828;
+    --second-bg-color: white; */
   } 
   
   html{   
@@ -169,6 +173,11 @@
     font-size: 2rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
+  }
+
+  .social-media img{
+    max-width: 25px;
+    max-height: 20px;
   }
   
   .social-media a:hover{
@@ -513,17 +522,6 @@
   @media (max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
-    }
-    .about {
-      padding-top: 4rem !important;
-    }
-    .home-img img{
-      width: 35rem;
-      height: 50rem;
-    }
-    .about-img img{
-      width: 35rem;
-      height: 50rem;
     }
   }
   

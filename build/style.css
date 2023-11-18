@@ -13,6 +13,10 @@
     --second-bg-color: #323946;
     --text-color: white;
     --main-color: #0ef;
+    /* --bg-color: white;
+    --text-color: black;
+    --main-color: #c62828;
+    --second-bg-color: white; */
   } 
   
   html{   
@@ -30,14 +34,11 @@
     min-height: 100vh;
     min-width: 100vw;
     padding: 0 9% 2rem;
+  
   } 
 
   .padding{
     padding-top: 4rem;
-  }
-
-  .extra-padding{
-    padding-top: 14rem;
   }
   
   .header{
@@ -114,7 +115,7 @@
   .home{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
   }
   
   .home-img img{
@@ -176,6 +177,10 @@
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
   }
+
+  .social-media{
+    padding-left: 2rem;
+  }
   
   .btn{
     display: inline-block;
@@ -197,7 +202,7 @@
   .about{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
   }
@@ -513,17 +518,6 @@
   @media (max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
-    }
-    .about {
-      padding-top: 4rem !important;
-    }
-    .home-img img{
-      width: 35rem;
-      height: 50rem;
-    }
-    .about-img img{
-      width: 35rem;
-      height: 50rem;
     }
   }
   

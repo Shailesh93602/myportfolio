@@ -3,17 +3,13 @@ import aboutImg from "../images/about.png";
 
 const About = () => {
   const [showFullContent, setShowFullContent] = useState(false);
-  const [paddingTop, setPaddingTop] = useState("14rem");
-
 
   const toggleContent = () => {
     setShowFullContent(!showFullContent);
-    if(!showFullContent) setPaddingTop("4rem");
-    else setPaddingTop("14rem");
   };
 
   return (
-    <section className="about extra-padding" id="about" style={{ paddingTop: paddingTop}}>
+    <section className="about extra-padding" id="about">
       <div className="about-img">
         <img src={aboutImg} alt="about" />
       </div>
