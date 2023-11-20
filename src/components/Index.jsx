@@ -49,10 +49,10 @@ const Index = () => {
           reality!
         </p>
         <div className="social-media">
-          <a href="https://www.linkedin.com/in/your-linkedin-profile-url">
+          <a href="https://www.linkedin.com/in/shaileshbhai-chaudhari/">
             <i className="bx bxl-linkedin"></i>
           </a>
-          <a href="https://github.com/your-github-profile-url">
+          <a href="https://github.com/shailesh93602">
             <i className="bx bxl-github"></i>
           </a>
           <a href="https://www.codechef.com/users/shaileshbhai03">
