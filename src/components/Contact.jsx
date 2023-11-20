@@ -29,10 +29,13 @@ const Contact = () => {
       );
 
       console.log("Email sent successfully:", response);
-      // You can add further logic here, such as displaying a success message.
+      setFullName("");
+      setEmail("");
+      setPhoneNumber("");
+      setSubject("");
+      setMessage("");
     } catch (error) {
       console.error("Error sending email:", error);
-      // Handle errors, e.g., display an error message to the user.
     }
   };
 
