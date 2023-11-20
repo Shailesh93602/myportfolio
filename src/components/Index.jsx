@@ -49,16 +49,16 @@ const Index = () => {
           reality!
         </p>
         <div className="social-media">
-          <a href="https://www.linkedin.com/in/shaileshbhai-chaudhari/">
+          <a href="https://www.linkedin.com/in/shaileshbhai-chaudhari/" target="_blank">
             <i className="bx bxl-linkedin"></i>
           </a>
-          <a href="https://github.com/shailesh93602">
+          <a href="https://github.com/shailesh93602" target="_blank">
             <i className="bx bxl-github"></i>
           </a>
-          <a href="https://www.codechef.com/users/shaileshbhai03">
+          <a href="https://www.codechef.com/users/shaileshbhai03" target="_blank">
             <i className="bx bxl-c-plus-plus"></i>
           </a>
-          <a href="https://www.hackerrank.com/profile/shailesh93602">
+          <a href="https://www.hackerrank.com/profile/shailesh93602" target="_blank">
             <i className="bx bx-code-alt"></i>
           </a>
         </div>
