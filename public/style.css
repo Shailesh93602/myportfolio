@@ -122,8 +122,8 @@
   }
   
   .home-img img{
-    width: 250px;
-    height: 350px;
+    width: 35rem;
+    height: 35rem;
     animation: floatImage 4s ease-in-out infinite;
   }
   
@@ -212,7 +212,7 @@
   }
   
   .about-img img{
-    width: 20rem;
+    width: 35rem;
     height: 35rem;
   }
   
