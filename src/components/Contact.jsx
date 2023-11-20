@@ -11,7 +11,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Send the form data to an API
+    const isConfirmed = window.confirm("Are you sure you want to submit the form?");
+    if (!isConfirmed) {
+      return; 
+    }
     const data = {
       from_name: fullName,
       from_email: email,
@@ -29,11 +32,23 @@ const Contact = () => {
       );
 
       console.log("Email sent successfully:", response);
+      
       setFullName("");
       setEmail("");
       setPhoneNumber("");
       setSubject("");
       setMessage("");
+
+       const successMessages = [
+        "Form submitted successfully!",
+        "Your message was sent successfully!",
+        "Thanks for reaching out! Your form has been submitted.",
+      ];
+
+      const randomSuccessMessage =
+        successMessages[Math.floor(Math.random() * successMessages.length)];
+
+      alert(randomSuccessMessage);
     } catch (error) {
       console.error("Error sending email:", error);
     }
