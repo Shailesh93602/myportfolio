@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aboutImg from "../images/about.png";
+import aboutImg from "../images/home.png";
 
 const About = () => {
   const [showFullContent, setShowFullContent] = useState(false);
