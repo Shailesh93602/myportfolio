@@ -56,10 +56,10 @@ const Index = () => {
             <i className="bx bxl-github"></i>
           </a>
           <a href="https://www.codechef.com/users/shaileshbhai03">
-            <i class="bx bxl-c-plus-plus"></i>
+            <i className="bx bxl-c-plus-plus"></i>
           </a>
           <a href="https://www.hackerrank.com/profile/shailesh93602">
-            <i class="bx bx-code-alt"></i>
+            <i className="bx bx-code-alt"></i>
           </a>
         </div>
       </div>
