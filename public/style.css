@@ -549,3 +549,32 @@
         margin-top: 2rem;
     }
   }
+
+
+.skills-section {
+  margin-top: 15px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 5px;
+}
+
+.resume-link {
+  color: var(--main-color); 
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  text-decoration: underline; 
+}
+
