@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from "react";
 import { useInterval } from "react-use";
 import homeImg from "../images/home.webp";
