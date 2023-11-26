@@ -25,7 +25,6 @@ const About = () => {
                 Passionate Full Stack Developer based in Gujarat, India,
                 dedicated to crafting high-quality, user-centric web applications.
               </p>
-              {/* Skills section */}
               <div className="skills-section">
                 <h3>Skills</h3>
                 <ul className="skills-list">
@@ -33,10 +32,13 @@ const About = () => {
                   <li>React</li>
                   <li>Express</li>
                   <li>MongoDB</li>
-                  {/* Add more skills as needed */}
+                  <li>C++</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>Java</li>
                 </ul>
               </div>
-              {/* Resume link */}
               <p>
                 Check out my resume for more details:
                 {" "}

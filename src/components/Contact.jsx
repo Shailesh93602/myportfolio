@@ -56,7 +56,7 @@ const Contact = () => {
 
   return (
     <section className="contact padding" id="contact">
-      <h2 className="heading">Contact Me!</h2>
+      <h2 className="heading">Contact <span>Me!</span></h2>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div className="input-box">
           <input
