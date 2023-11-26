@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from "react";
-import aboutImg from "../images/home.png";
+import aboutImg from "../images/home.webp";
 
 const About = () => {
   const [showFullContent, setShowFullContent] = useState(false);
