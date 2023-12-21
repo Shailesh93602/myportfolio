@@ -109,6 +109,10 @@ const Contact = () => {
         <a href="tel:+919313026530">
           <i className="bx bx-phone-call"></i>
         </a>
+        <a href="http://wa.me/9313026530" target="_blank">
+          <i className="bx bxl-whatsapp"></i>
+        </a>
+        
       </div>
     </section>
   );
