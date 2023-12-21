@@ -17,7 +17,7 @@ const Blogs = () => {
   return (
     <section className="blogs padding" id="blogs">
       <h2 className="heading">
-        Our <span>Blogs</span>
+        My <span>Blogs</span>
       </h2>
 
       <div className="blogs-container">

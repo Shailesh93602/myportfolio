@@ -228,11 +228,11 @@
     margin: 2rem 0 3rem;
   }
   
-  .services h2{
+  .blogs h2{
     margin-bottom: 5rem;
   }
   
-  .services-container{
+  .blogs-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +240,7 @@
     gap: 2rem;
   }
   
-  .services-container .services-box{
+  .blogs-container .blogs-box{
     flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -250,21 +250,21 @@
     transition: .5s ease;
   }
   
-  .services-container .services-box:hover{
+  .blogs-container .blogs-box:hover{
     border: .2rem solid var(--main-color);
     transform: scale(1.02);
   }
   
-  .services-box i{
+  .blogs-box i{
     font-size: 7rem;
     color: var(--main-color);
   }
   
-  .services-box h3{
+  .blogs-box h3{
     font-size: 2.6rem;
   }
   
-  .services-box p{
+  .blogs-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
   }
@@ -456,7 +456,7 @@
     section{
         padding: 10rem 3% 2rem;
     }
-    .services{
+    .blogs{
         padding-bottom: 7rem;
     }
     .portfolio{
@@ -552,7 +552,7 @@
         margin-top: 4rem;
     }
     
-    .services h2{
+    .blogs h2{
         margin-bottom: 3rem;
     }
     
