@@ -102,6 +102,14 @@ const Contact = () => {
         ></textarea>
         <input type="submit" value="Send Message" className="btn" />
       </form>
+      <div className="social-media">
+        <a href="mailto:shailesh93602@gmail.com">
+          <i className="bx bx-envelope"></i>
+        </a>
+        <a href="tel:+919313026530">
+          <i className="bx bx-phone-call"></i>
+        </a>
+      </div>
     </section>
   );
 };

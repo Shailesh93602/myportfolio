@@ -13,10 +13,6 @@
     --second-bg-color: #323946;
     --text-color: white;
     --main-color: #0ef;
-    /* --bg-color: white;
-    --text-color: black;
-    --main-color: #c62828;
-    --second-bg-color: white; */
   } 
   
   html{   
@@ -31,7 +27,7 @@
   }
   
   section{
-    min-height: 100vh;
+    min-height: 90vh;
     min-width: 100vw;
     padding: 0 9% 2rem;
   } 
@@ -51,15 +47,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100; 
     background-color: #191e24f5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 50px;
-    padding: 2rem 9%;
     box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.548);
-    color: white; 
+    color: white;
+    z-index: 100;
   }
   
   .header.sticky{
@@ -118,12 +110,14 @@
   .home{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    background-color: var(--second-bg-color);
+    /* box-shadow: 10px -10px 10px rgba(128, 128, 128, 0.548); */
+    margin-top: 11px;
   }
   
   .home-img img{
-    width: 250px;
-    height: 350px;
+    width: 35rem;
+    height: 35rem;
     animation: floatImage 4s ease-in-out infinite;
   }
   
@@ -147,7 +141,6 @@
   .home-content h3:nth-of-type(2){
     margin-bottom: 2rem;
   }
-  
   span{
     color: var(--main-color);
   }
@@ -206,13 +199,13 @@
   .about{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     gap: 2rem;
     background: var(--second-bg-color);
+    margin-top: 11px;
   }
   
   .about-img img{
-    width: 20rem;
+    width: 35rem;
     height: 35rem;
   }
   
@@ -278,6 +271,7 @@
   
   .portfolio{
     background: var(--second-bg-color);
+    margin-top: 11px;
   }
   
   .portfolio h2{
@@ -415,10 +409,39 @@
   .footer-iconTop a:hover{
     box-shadow: 0 0 1rem var(--main-color);
   }
+  
   .footer-iconTop a i{
     font-size: 2.4rem;
     color: var(--second-bg-color);
   }
+
+  .skills-section {
+    margin-top: 15px;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills-list li {
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
+  }
+  
+  .resume-link {
+    color: var(--main-color);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .resume-link:hover {
+    text-decoration: underline;
+  }  
   
   @media (max-width: 1200px){
     html{
@@ -448,6 +471,13 @@
   }
   
   @media (max-width: 768px){
+    section {
+      min-height: auto;
+    }
+    
+    .about {
+      background-color: var(--bg-color);
+    }
     
     .header {
       flex-direction: column;
@@ -457,6 +487,10 @@
     
     .logo {
       margin-bottom: 1rem;
+    }
+    
+    .about.extra-padding {
+      padding-top: 4rem;
     }
 
     .navbar{
@@ -475,12 +509,15 @@
         width: 100vw; 
         padding-left: 2rem;
     }
+    
     .navbar.active{
       display: flex;
     }
+    
     .navbar .links{
       margin: 1.5rem 0;
     }
+    
     #menu-icon{
       display: block;
       /* margin-left: auto; */
@@ -488,32 +525,41 @@
       margin-top: -33px;
       padding-top: 0px;
     }
+    
     .home{
       flex-direction: column;
     }
+    
     .home-content h3{
         font-size: 2.6rem;
     }
+    
     .home-content h1{
         font-size: 5rem;
     }
+    
     .home-img img{
         width: 40rem;
         margin-top: 4rem;
     }
+    
     .about{
         flex-direction: column-reverse;
     }
+    
     .about img{
         width: 40rem;
         margin-top: 4rem;
     }
+    
     .services h2{
         margin-bottom: 3rem;
     }
+    
     .portfolio h2{
         margin-bottom: 3rem;
     }
+    
     .portfolio-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -529,6 +575,7 @@
     html{
         font-size: 50%;
     }
+    
     .contact form .input-box input{
         width: 100vw;
     }
@@ -538,12 +585,15 @@
     .home-img img{
         width: 90vw;
     }
+    
     .about-img img{
         width: 90vw;
     }
+    
     .footer{
         flex-direction: column-reverse;
     }
+    
     .footer p{
         text-align: center;
         margin-top: 2rem;
