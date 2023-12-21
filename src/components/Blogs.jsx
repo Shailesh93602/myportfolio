@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Services = () => {
+const Blogs = () => {
   const [showContent, setShowContent] = useState({
     aboutFsd: false,
     aboutCpp: false,
@@ -15,13 +15,13 @@ const Services = () => {
   };
 
   return (
-    <section className="services padding" id="services">
+    <section className="blogs padding" id="blogs">
       <h2 className="heading">
-        Our <span>Services</span>
+        Our <span>Blogs</span>
       </h2>
 
-      <div className="services-container">
-        <div className="services-box">
+      <div className="blogs-container">
+        <div className="blogs-box">
           <i className="bx bx-code-alt"></i>
           <h3>Fullstack Development</h3>
           {showContent.aboutFsd ? (
@@ -52,7 +52,7 @@ const Services = () => {
           ) : (
             <div id="aboutFsdShort">
               <p>
-                Welcome to my services page! As a fullstack developer, I
+                Welcome to my blogs page! As a fullstack developer, I
                 specialize in creating dynamic and interactive web applications.
                 With expertise in both frontend and backend technologies, I can
                 handle the entire development process from start to finish.
@@ -67,7 +67,7 @@ const Services = () => {
           )}
         </div>
 
-        <div className="services-box">
+        <div className="blogs-box">
           <i className="bx bxl-c-plus-plus"></i>
           <h3>C++ Development</h3>
           {showContent.aboutCpp ? (
@@ -115,7 +115,7 @@ const Services = () => {
           )}
         </div>
 
-        <div className="services-box">
+        <div className="blogs-box">
           <i className="bx bx-code"></i>
           <h3>Frontend Developer</h3>
           {showContent.aboutFd ? (
@@ -163,4 +163,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Blogs;
