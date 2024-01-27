@@ -91,8 +91,6 @@ const Portfolio = () => {
           </div>
         </div>
 
-        >
-
         <div className="portfolio-box">
         <img src={portfolio1} alt="portfolio5" />
 
