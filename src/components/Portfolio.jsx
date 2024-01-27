@@ -53,6 +53,24 @@ const Portfolio = () => {
         </div>
 
         <div className="portfolio-box">
+        <img src={portfolio1} alt="portfolio3" />
+        <div className="portfolio-layer">
+            <h4>MasteryPrep</h4>
+            <p className="section-description">
+              The MasteryPrep is an online platform to learn the basic fundamentals of programming to crack technical interviews.
+              It provides basics of Data Structures and Algorithms, Database Management System, Object Oriented Programming, Problem Solving and Common Interviw Questions. It is built using MERN Stack i.e., React, Node.js, Express and MongoDB.
+            </p>
+            <a
+              href="https://www.github.com/shailesh93602/MasteryPrep/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+
+        <div className="portfolio-box">
         <img src={portfolio1} alt="portfolio1" />
 
           <div className="portfolio-layer">
