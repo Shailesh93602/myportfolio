@@ -32,7 +32,7 @@ const Portfolio = () => {
         </div>
 
         <div className="portfolio-box">
-        <img src={portfolio1} alt="portfolio1" />
+        <img src={portfolio1} alt="portfolio2" />
 
           <div className="portfolio-layer">
             <h4>Jarvis AI</h4>
@@ -71,7 +71,7 @@ const Portfolio = () => {
         </div>
 
         <div className="portfolio-box">
-        <img src={portfolio1} alt="portfolio1" />
+        <img src={portfolio1} alt="portfolio4" />
 
           <div className="portfolio-layer">
             <h4>TODO List</h4>
@@ -90,6 +90,47 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
+
+        >
+
+        <div className="portfolio-box">
+        <img src={portfolio1} alt="portfolio5" />
+
+          <div className="portfolio-layer">
+            <h4>Tic Tac Toe</h4>
+            <p className="about-description">
+              The Tic Tac Toe is a simple and user friendly web game that two players can play. that also provides a reset button and also provides different sounds on click and on winning. This website is made using HTML, CSS and Javascript.
+            </p>
+            <a
+              href="https://github.com/Shailesh93602/tictactoe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+
+        >
+
+        <div className="portfolio-box">
+        <img src={portfolio1} alt="portfolio6" />
+
+          <div className="portfolio-layer">
+            <h4>Book E Sell</h4>
+            <p className="about-description">
+              The Book E Sell is a Full Stack Web Application that can be used to sell and buy books online. Implemented user registration, user login, admin login, searching for books, adding to cart, buying, publishing etc. This website is made using React, Node.js, Express, MonogDB and CSS.
+            </p>
+            <a
+              href="https://github.com/Shailesh93602/todolist"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bx-link-external"></i>
+            </a>
+          </div>
+        </div>
+        
       </div>
     </section>
   );
