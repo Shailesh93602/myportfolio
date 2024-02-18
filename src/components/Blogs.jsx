@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const Blogs = () => {
   const blogLinks = [
     "https://guidetofullstack.blogspot.com/2023/12/demystifying-basics-of-full-stack.html",
+    "https://guidetofullstack.blogspot.com/2024/02/mastering-frontend-development.html"
   ];
 
   const redirectToBlog = (number) => {
@@ -20,7 +21,7 @@ const Blogs = () => {
           <i className="bx bx-code"></i>
           <h3>
             Demystifying the Basics of Full-Stack Development: A Beginner's
-            Guide"
+            Guide
           </h3>
           <div>
             <p>
@@ -32,6 +33,25 @@ const Blogs = () => {
               this guide is for you!
             </p>
             <button className="btn" onClick={() => redirectToBlog(1)}>
+                Read More
+            </button>
+          </div>
+        </div>
+        <div className="blogs-box">
+          <i className="bx bx-code"></i>
+          <h3>
+            Mastering Frontend Development: Essential Skills and Best Practices
+          </h3>
+          <div>
+            <p>
+              Imagine navigating the vast internet landscape without visually appealing websites,
+              intuitive user interfaces, or interactive features. Frontend development is pivotal
+              in transforming static web pages into dynamic and engaging experiences that captivate
+              users and drive engagement. From the layout and styling to the functionality and
+              responsiveness, front-end developers are responsible for creating the face of the
+              web — the interface through which users interact with digital content and services.
+            </p>
+            <button className="btn" onClick={() => redirectToBlog(2)}>
                 Read More
             </button>
           </div>
