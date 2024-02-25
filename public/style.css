@@ -6,6 +6,7 @@
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
+    scrollbar-width: none;
   }
   
   :root{
@@ -17,7 +18,10 @@
   
   html{   
     font-size: 62.5%;
-    overflow-x: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden; */
   }
   
   body{
@@ -70,7 +74,10 @@
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
+    &:hover {
+      color: var(--main-color);
+    }
   }
   
   .navbar{
@@ -114,11 +121,17 @@
     /* box-shadow: 10px -10px 10px rgba(128, 128, 128, 0.548); */
     margin-top: 11px;
   }
+
+  .home {
+    svg {
+      margin-top: -15rem;
+    }
+  }
   
-  .home-img img{
-    width: 35rem;
-    height: 35rem;
-    animation: floatImage 4s ease-in-out infinite;
+  .home-image{
+    width: 6rem;
+    height: 6rem;
+    /* animation: floatImage 4s ease-in-out infinite; */
   }
   
   @keyframes floatImage{
@@ -468,6 +481,10 @@
     .footer{
         padding: 2rem 3%;
     }
+
+    svg {
+      margin-top: 50%;
+    }
   }
   
   @media (max-width: 768px){
@@ -528,6 +545,8 @@
     
     .home{
       flex-direction: column;
+      padding: 1rem;
+      gap: 50px;
     }
     
     .home-content h3{
@@ -538,9 +557,8 @@
         font-size: 5rem;
     }
     
-    .home-img img{
-        width: 40rem;
-        margin-top: 4rem;
+    .home-image{
+        /* width: 40rem; */
     }
     
     .about{
@@ -583,7 +601,8 @@
   
   @media (max-width: 365px){
     .home-img img{
-        width: 90vw;
+      margin-top: 10rem;
+        /* width: 90vw; */
     }
     
     .about-img img{
