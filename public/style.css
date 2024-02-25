@@ -128,10 +128,15 @@
     }
   }
   
-  .home-image{
+  /* .home-image{
     width: 6rem;
     height: 6rem;
-    /* animation: floatImage 4s ease-in-out infinite; */
+  } */
+
+  .home img {
+    animation: floatImage 4s ease-in-out infinite;
+    width: 40rem;
+    height: 40rem;
   }
   
   @keyframes floatImage{

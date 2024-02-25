@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useMemo } from "react";
 import { useInterval } from "react-use";
 import homeImg from "../images/home.webp";
-import MySVG from "./MySVG";
+// import MySVG from "./MySVG";
 
 const Index = () => {
   const elements = useMemo(
@@ -65,9 +65,10 @@ const Index = () => {
         </div>
       </div>
 
-      {/* <div className="home-img"> */}
-        <MySVG />
-      {/* </div> */}
+      <div className="home-img">
+        {/* <MySVG /> */}
+        <img src={homeImg} alt="home" />
+      </div>
     </section>
   );
 };
