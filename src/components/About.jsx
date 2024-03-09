@@ -36,8 +36,10 @@ const About = () => {
                   <li>C++</li>
                   <li>HTML</li>
                   <li>CSS</li>
+                  <li>EJS</li>
                   <li>Javascript</li>
                   <li>Java</li>
+                  <li>Android</li>
                 </ul>
               </div>
               <p>
