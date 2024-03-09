@@ -37,7 +37,8 @@ const About = () => {
                   <li>HTML</li>
                   <li>CSS</li>
                   <li>EJS</li>
-                  <li>Javascript</li>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
                   <li>Java</li>
                   <li>Android</li>
                 </ul>
