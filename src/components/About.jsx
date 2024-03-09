@@ -32,6 +32,7 @@ const About = () => {
                   <li>React</li>
                   <li>Express</li>
                   <li>MongoDB</li>
+                  <li>MySQL</li>
                   <li>C++</li>
                   <li>HTML</li>
                   <li>CSS</li>
